@@ -1,0 +1,11 @@
+.DS_Store
+build/
+lib/SDL-1.2.15/local
+lib/SDL-1.2.15/Makefile
+lib/SDL-1.2.15/SDL.qpg
+lib/SDL-1.2.15/build-deps
+lib/SDL-1.2.15/config.log
+lib/SDL-1.2.15/config.status
+lib/SDL-1.2.15/libtool
+lib/SDL-1.2.15/sdl-config
+lib/SDL-1.2.15/sdl.pc
