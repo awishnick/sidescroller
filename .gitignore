@@ -9,3 +9,6 @@ lib/SDL-1.2.15/config.status
 lib/SDL-1.2.15/libtool
 lib/SDL-1.2.15/sdl-config
 lib/SDL-1.2.15/sdl.pc
+lib/boost_1_49_0/local
+*.a
+*.o
