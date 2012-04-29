@@ -4,6 +4,7 @@ project(sidescroller)
 
 set(SOURCES
   src/main.cpp
+  src/engine.cpp
 )
 set(HEADERS
 )
