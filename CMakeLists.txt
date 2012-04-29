@@ -2,12 +2,8 @@
 cmake_minimum_required(VERSION 2.6)
 project(sidescroller)
 
-set(SOURCES
-  src/main.cpp
-  src/engine.cpp
-)
-set(HEADERS
-)
+file(GLOB SOURCES "src/*.cpp")
+file(GLOB HEADERS "src/*.h")
 
 # We support clang
 option(USE_CLANG "build with clang/libcxx" ON)
@@ -23,6 +19,8 @@ endif(USE_CLANG)
 # modes depending on the cmake build target.
 set(SDL_FOLDER ${CMAKE_CURRENT_SOURCE_DIR}/lib/sdl-1.2.15
     CACHE STRING "Path to SDL 1.2.15" FORCE)
+set(SDL_IMAGE_FOLDER ${SDL_FOLDER}/SDL_image-1.2.12
+    CACHE STRING "Path to SDL_image 1.2.15" FORCE)
 find_library(SDL_LIBRARY
     NAMES SDL-1.2.15 SDL
     PATHS ${SDL_FOLDER}
@@ -35,7 +33,12 @@ find_library(SDLMAIN_LIBRARY
     PATH_SUFFIXES local/lib VisualC/SDLmain/Release
     NO_DEFAULT_PATH
 )
-
+find_library(SDL_IMAGE_LIBRARY
+    NAMES SDL_image
+    PATHS ${SDL_FOLDER}
+    PATH_SUFFIXES local/lib VisualC/SDL/Release
+    NO_DEFAULT_PATH
+)
 # we also need to find the system's OpenGL version
 find_package(OpenGL REQUIRED)
 
@@ -49,6 +52,7 @@ endif()
 # Add SDL as an include folder
 include_directories(
     ${SDL_FOLDER}/include
+    ${SDL_IMAGE_FOLDER}
     src
 )
  
@@ -60,6 +64,9 @@ add_executable(
   ${HEADERS}
 )
 
+# Copy the resources folder
+file(COPY resources DESTINATION .)
+
 # Lastly we have to link the OpenGL libraries, SDL and the cocoa
 # framework to our application.  The latter is only happening on
 # OS X obviously.
@@ -68,6 +75,7 @@ target_link_libraries(
     ${OPENGL_LIBRARIES}
     ${SDL_LIBRARY}
     ${SDLMAIN_LIBRARY}
+    ${SDL_IMAGE_LIBRARY}
     ${EXTRA_LIBS}
 )
 

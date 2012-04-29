@@ -21,7 +21,14 @@ int main(int, char**) {
     return -1;
   }
 
-  SDL_Delay(2500);
+  try {
+    engine->LoadResources();
+  } catch(const ResourceError& e) {
+    std::cerr << "Error loading resources: " << e.what() << std::endl;
+    return -1;
+  }
+
+  engine->EventLoop();
 
   return 0;
 }
