@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "Interpreter.h"
 #include "Render.h"
 #include <SDL.h>
 #include <SDL_opengl.h>
@@ -25,10 +26,12 @@ ResourceError::~ResourceError() throw() {}
 
 struct Engine::Impl {
   SDL_Surface* screen;
+  unique_ptr<Interpreter> interpreter;
   unique_ptr<Render> render;
 
   Impl() :
     screen(nullptr),
+    interpreter(new Interpreter),
     render(new Render) {
   }
 };

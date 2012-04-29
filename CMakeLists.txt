@@ -39,6 +39,18 @@ find_library(SDL_IMAGE_LIBRARY
     PATH_SUFFIXES local/lib VisualC/SDL/Release
     NO_DEFAULT_PATH
 )
+
+
+# Find python
+set(PYTHON_FOLDER ${CMAKE_CURRENT_SOURCE_DIR}/lib/Python-2.7.3/local
+    CACHE STRING "Path to Python 2.7.3" FORCE)
+find_library(PYTHON_LIBRARY
+    NAMES python2.7
+    PATHS ${PYTHON_FOLDER}
+    PATH_SUFFIXES lib
+    NO_DEFAULT_PATH
+)
+
 # we also need to find the system's OpenGL version
 find_package(OpenGL REQUIRED)
 
@@ -53,6 +65,7 @@ endif()
 include_directories(
     ${SDL_FOLDER}/include
     ${SDL_IMAGE_FOLDER}
+    ${PYTHON_FOLDER}/include/python2.7
     src
 )
  
@@ -76,6 +89,7 @@ target_link_libraries(
     ${SDL_LIBRARY}
     ${SDLMAIN_LIBRARY}
     ${SDL_IMAGE_LIBRARY}
+    ${PYTHON_LIBRARY}
     ${EXTRA_LIBS}
 )
 
