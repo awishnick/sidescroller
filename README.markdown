@@ -1,7 +1,9 @@
 ## Sidescroller
 I think I'm making a sidescroller!
+
 ## Requirements
 * CMake
+
 ## Dependencies
 ### SDL
     $ cd lib/SDL-1.2.15
