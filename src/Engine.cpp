@@ -3,23 +3,42 @@
 #include <SDL_opengl.h>
 #include <utility>
 
-Engine::InitializationError::InitializationError(std::string error) :
+SDLError::SDLError(std::string error) :
   error_(std::move(error)) {
 }
-const char* Engine::InitializationError::what() const throw() {
+const char* SDLError::what() const throw() {
   return error_.c_str();
 }
-Engine::InitializationError::~InitializationError() throw() {}
+SDLError::~SDLError() throw() {}
 
 struct Engine::Impl {
+  SDL_Surface* screen;
+
+  Impl() :
+    screen(nullptr) {
+  }
 };
 
 Engine::Engine() :
   impl_(new Impl) {
 
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    throw InitializationError(SDL_GetError());
+    throw SDLError(SDL_GetError());
   }
+}
+
+void Engine::SetVideoMode(unsigned width,
+                          unsigned height,
+                          unsigned bit_depth) {
+  SDL_Surface* screen = SDL_SetVideoMode(width,
+                                         height,
+                                         bit_depth,
+                                         SDL_DOUBLEBUF);
+  if (!screen) {
+    throw SDLError(SDL_GetError());
+  }
+
+  impl_->screen = screen;
 }
 
 Engine::~Engine() {

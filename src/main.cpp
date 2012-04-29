@@ -11,7 +11,7 @@ int main(int, char**) {
   std::unique_ptr<Engine> engine;
   try {
     engine.reset(new Engine);
-  } catch(const Engine::InitializationError& e) {
+  } catch(const SDLError& e) {
     std::cerr << "Error initializing engine: " << e.what() << std::endl;
     return -1;
   }
@@ -19,11 +19,7 @@ int main(int, char**) {
   const unsigned window_width = 800,
                  window_height = 600,
                  bit_depth = 16;
-  SDL_Surface* screen = SDL_SetVideoMode(window_width,
-                                         window_height,
-                                         bit_depth,
-                                         SDL_DOUBLEBUF);
-  (void)screen;
+  engine->SetVideoMode(window_width, window_height, bit_depth);
 
   SDL_Delay(2500);
 
