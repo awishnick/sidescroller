@@ -19,7 +19,12 @@ int main(int, char**) {
   const unsigned window_width = 800,
                  window_height = 600,
                  bit_depth = 16;
-  engine->SetVideoMode(window_width, window_height, bit_depth);
+  try {
+    engine->SetVideoMode(window_width, window_height, bit_depth);
+  } catch(const SDLError& e) {
+    std::cerr << "Error setting video mode: " << e.what() << std::endl;
+    return -1;
+  }
 
   SDL_Delay(2500);
 
