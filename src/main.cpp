@@ -1,13 +1,8 @@
 #include <SDL.h>
-#include <SDL_opengl.h>
 #include "Engine.h"
 #include <iostream>
 
 int main(int, char**) {
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    std::cerr << "Could not initialize SDL: " << SDL_GetError() << std::endl;
-  }
-
   std::unique_ptr<Engine> engine;
   try {
     engine.reset(new Engine);
