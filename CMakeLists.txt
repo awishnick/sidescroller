@@ -8,6 +8,14 @@ set(SOURCES
 set(HEADERS
 )
 
+# We support clang
+option(USE_CLANG "build with clang/libcxx" ON)
+if(USE_CLANG)
+  set(CMAKE_CXX_COMPILER /usr/bin/clang++)
+  set(CMAKE_CXX_FLAGS "-stdlib=libc++")
+  add_definitions(-Wall -Wextra -Werror -std=c++0x)
+endif(USE_CLANG)
+
 # The following code finds SDL in your checkout on OS X, Linux
 # as well as Windows.  On Windows I am lazy and only look for the
 # release version of SDL, feel free to make this also look for debug
