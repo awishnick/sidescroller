@@ -30,8 +30,8 @@ Kernel configured for up to 4 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3
 Primary memory available: 8.00 gigabytes
-Default processor set: 82 tasks, 407 threads, 4 processors
-Load average: 2.09, Mach factor: 2.07
+Default processor set: 78 tasks, 367 threads, 4 processors
+Load average: 0.19, Mach factor: 3.80
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -5435,7 +5435,7 @@ configure:9562: checking for bind_textdomain_codeset
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_bind_textdomain_codeset", referenced from:
-      _main in ccwKJTTI.o
+      _main in cc8K9o3j.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -5664,7 +5664,7 @@ configure:9562: checking for getresuid
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_getresuid", referenced from:
-      _main in cc18uDMR.o
+      _main in ccrJ8N2p.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -5834,7 +5834,7 @@ configure:9562: checking for getresgid
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_getresgid", referenced from:
-      _main in cczr1sRh.o
+      _main in ccvv6fmm.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -6008,7 +6008,7 @@ configure:9562: checking for getspnam
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_getspnam", referenced from:
-      _main in ccSENUgs.o
+      _main in cc5RNdAX.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -6179,7 +6179,7 @@ configure:9562: checking for getspent
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_getspent", referenced from:
-      _main in ccVWL1kV.o
+      _main in ccAKxLph.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -6394,7 +6394,7 @@ configure:9562: checking for mremap
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_mremap", referenced from:
-      _main in ccLLxcv8.o
+      _main in ccEoBcuU.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -6588,7 +6588,7 @@ configure:9562: checking for plock
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_plock", referenced from:
-      _main in ccleZrDf.o
+      _main in ccg6yrD7.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -6777,7 +6777,7 @@ configure:9562: checking for pthread_init
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_pthread_init", referenced from:
-      _main in ccP2XzwL.o
+      _main in ccLJJ7Iq.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -6983,7 +6983,7 @@ configure:9562: checking for sem_timedwait
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_sem_timedwait", referenced from:
-      _main in ccHSiw5l.o
+      _main in ccMRVnBW.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -7237,7 +7237,7 @@ configure:9562: checking for setresuid
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_setresuid", referenced from:
-      _main in ccz1UqKG.o
+      _main in cc2ATsQa.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -7445,7 +7445,7 @@ configure:9562: checking for setresgid
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_setresgid", referenced from:
-      _main in ccF59omU.o
+      _main in ccev4XAR.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -7714,7 +7714,7 @@ configure:9562: checking for tmpnam_r
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_tmpnam_r", referenced from:
-      _main in ccVg0gdw.o
+      _main in ccWsqUD6.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -7972,7 +7972,7 @@ configure:9562: checking for _getpty
 configure:9562: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "__getpty", referenced from:
-      _main in cc8TzEr3.o
+      _main in ccGj6Ny2.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:9562: $? = 1
@@ -8719,7 +8719,7 @@ configure:10585: checking for fseek64
 configure:10585: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_fseek64", referenced from:
-      _main in ccWF9juN.o
+      _main in ccJpkHwG.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:10585: $? = 1
@@ -8980,7 +8980,7 @@ configure:10585: checking for ftell64
 configure:10585: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_ftell64", referenced from:
-      _main in ccX319qv.o
+      _main in cct81BUD.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:10585: $? = 1
@@ -10860,7 +10860,7 @@ configure:11596: checking for gethostbyname_r
 configure:11596: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "_gethostbyname_r", referenced from:
-      _main in ccPEsYG1.o
+      _main in ccrsxmD8.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:11596: $? = 1
@@ -11147,7 +11147,7 @@ configure:11749: checking for __fpu_control
 configure:11749: gcc -o conftest -g -O2   conftest.c -ldl  >&5
 Undefined symbols for architecture x86_64:
   "___fpu_control", referenced from:
-      _main in ccyMwjPA.o
+      _main in cczaTFlt.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 configure:11749: $? = 1
@@ -14767,6 +14767,7 @@ config.status:1158: creating Modules/Setup.config
 config.status:1158: creating Misc/python.pc
 config.status:1158: creating Modules/ld_so_aix
 config.status:1158: creating pyconfig.h
+config.status:1332: pyconfig.h is unchanged
 
 ## ---------------- ##
 ## Cache variables. ##
