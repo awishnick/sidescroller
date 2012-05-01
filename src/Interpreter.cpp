@@ -1,5 +1,8 @@
+#include "common.h"
 #include "Interpreter.h"
-#include <Python.h>
+PUSH_ALL_WARNINGS
+#include <boost/python.hpp>
+POP_ALL_WARNINGS
 
 struct Interpreter::Impl {
 };

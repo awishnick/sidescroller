@@ -19,7 +19,8 @@ I think I'm making a sidescroller!
     $ make && make install
 ### Boost
     $ cd lib/boost_1_49_0
-    $ ./bootstrap.sh --prefix=`pwd`/local
+    $ ./bootstrap.sh
+    $ ./b2
 ## To build sidescroller
     $ mkdir build
     $ cd build
