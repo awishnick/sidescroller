@@ -3,21 +3,13 @@
 #include <exception>
 #include <memory>
 #include <string>
+#include "ResourceError.h"
 
 class SDLError : public std::exception {
 public:
   SDLError(std::string error);
   virtual const char* what() const throw();
   virtual ~SDLError() throw();
-private:
-  const std::string error_;
-};
-
-class ResourceError : public std::exception {
-public:
-  ResourceError(std::string error);
-  virtual const char* what() const throw();
-  virtual ~ResourceError() throw();
 private:
   const std::string error_;
 };

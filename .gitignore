@@ -10,6 +10,7 @@ lib/SDL-1.2.15/libtool
 lib/SDL-1.2.15/sdl-config
 lib/SDL-1.2.15/sdl.pc
 lib/boost_1_48_0/stage
+lib/boost_1_48_0/bootstrap.log
 lib/boost_1_48_0/b2
 lib/boost_1_48_0/bin.v2/config.log
 lib/boost_1_48_0/bjam

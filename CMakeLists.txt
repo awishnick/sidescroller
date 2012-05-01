@@ -10,7 +10,7 @@ option(USE_CLANG "build with clang/libcxx" ON)
 if(USE_CLANG)
   set(CMAKE_CXX_COMPILER /usr/bin/clang++)
   set(CMAKE_CXX_FLAGS "-stdlib=libc++")
-  add_definitions(-Wall -Wextra -Werror -std=c++0x)
+  add_definitions(-Wall -Wextra -Werror -std=c++0x -U__STRICT_ANSI__ -D__STDC_FORMAT_MACROS)
 endif(USE_CLANG)
 
 # The following code finds SDL in your checkout on OS X, Linux
@@ -51,6 +51,16 @@ find_library(PYTHON_LIBRARY
     NO_DEFAULT_PATH
 )
 
+# Boost
+set(BOOST_FOLDER ${CMAKE_CURRENT_SOURCE_DIR}/lib/boost_1_48_0
+    CACHE STRING "Path to Boost 1.48.0" FORCE)
+find_library(BOOST_PYTHON_LIBRARY
+    NAMES libboost_python.a boost_python
+    PATHS ${BOOST_FOLDER}
+    PATH_SUFFIXES stage/lib
+    NO_DEFAULT_PATH
+)
+
 # we also need to find the system's OpenGL version
 find_package(OpenGL REQUIRED)
 
@@ -66,6 +76,7 @@ include_directories(
     ${SDL_FOLDER}/include
     ${SDL_IMAGE_FOLDER}
     ${PYTHON_FOLDER}/include/python2.7
+    ${BOOST_FOLDER}
     src
 )
  
@@ -90,6 +101,7 @@ target_link_libraries(
     ${SDLMAIN_LIBRARY}
     ${SDL_IMAGE_LIBRARY}
     ${PYTHON_LIBRARY}
+    ${BOOST_PYTHON_LIBRARY}
     ${EXTRA_LIBS}
 )
 
