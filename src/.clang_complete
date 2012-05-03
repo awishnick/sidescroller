@@ -1,0 +1,7 @@
+-I../lib/sdl-1.2.15/include
+-I../lib/SDL_image-1.2.12
+-I../lib/Python-2.7.3/local/include/python2.7
+-I../lib/boost_1_48_0
+-std=c++0x
+-U__STRICT_ANSI__
+-D__STDC_FORMAT_MACROS
